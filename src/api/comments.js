@@ -7,3 +7,11 @@ export const getComments = async () => {
 
   return response.data;
 };
+
+export const getComments_Pagenation = async (currentPage, limit) => {
+  const response = await axios.get(
+    URL_COMMENTS + `?_page=${currentPage}&_limit=${limit}&_order=desc&_sort=id`
+  );
+
+  return response.data;
+};
