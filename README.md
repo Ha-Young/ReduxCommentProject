@@ -6,15 +6,15 @@
 
 # ToDo
 - [x] api로 부터 받아온 데이터를 redux의 state로 뿌린다
-- [] 페이지 네이션 처리를 한다
-- [] 첫 페이지 로딩시 댓글을 불러온다. (입력, 수정, 삭제시에도 작동)
-- [] 댓글 입력이면 1페이지로 수정 후 현재 보고 있는 페이지를 유지한다
-- [] 프론트앤드에서 api 호출을 이해한다 (GET POST PUT DELETE -> 모든 메서드 사용하기)
-- [] async / awiat 혹은 promise를 활용하여 전달받은 api 응답을 가공
-- [] redux thunk를 활용해 redux 작성하기
-- [] 리펙토링 - 반복되는 구조 개선하기
-- [] reducer 데이터 깊이에 대한 이해
-- [] React hookuseSelector, useEffect의 사용
+- [ ] 페이지 네이션 처리를 한다
+- [ ] 첫 페이지 로딩시 댓글을 불러온다. (입력, 수정, 삭제시에도 작동)
+- [ ] 댓글 입력이면 1페이지로 수정 후 현재 보고 있는 페이지를 유지한다
+- [ ] 프론트앤드에서 api 호출을 이해한다 (GET POST PUT DELETE -> 모든 메서드 사용하기)
+- [ ] async / awiat 혹은 promise를 활용하여 전달받은 api 응답을 가공
+- [ ] redux thunk를 활용해 redux 작성하기
+- [ ] 리펙토링 - 반복되는 구조 개선하기
+- [ ] reducer 데이터 깊이에 대한 이해
+- [ ] React hookuseSelector, useEffect의 사용
 
 ## 프로젝트 소개
 - 프론트 앤드 개발자는 백엔드와 협업을 해서 페이지를 완성합니다. API 서버와 통신을 해서 작동하는 댓글 프로젝트를 Redux를 적용해서 완성해주세요.
