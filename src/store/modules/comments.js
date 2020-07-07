@@ -19,7 +19,7 @@ export const getComments = () => async (dispatch) => {
 };
 
 export const initialState = {
-  posts: {
+  comments: {
     loading: false,
     data: null,
     error: null,
@@ -31,23 +31,29 @@ export default function comments(state = initialState, action) {
     case GET_COMMENTS:
       return {
         ...state,
-        loading: true,
-        data: null,
-        error: null,
+        comments: {
+          loading: true,
+          data: null,
+          error: null,
+        },
       };
     case GET_COMMENTS_SUCCESS:
       return {
         ...state,
-        loading: false,
-        data: action.comments,
-        error: null,
+        comments: {
+          loading: false,
+          data: action.comments,
+          error: null,
+        },
       };
     case GET_COMMENTS_ERROR:
       return {
         ...state,
-        loading: false,
-        data: null,
-        error: action.error,
+        comments: {
+          loading: false,
+          data: null,
+          error: action.error,
+        },
       };
     default:
       return state;
