@@ -4,20 +4,22 @@ import CommentList from "../components/CommentList";
 import { getComments } from "../store/modules/comments";
 
 function CommentListContainer() {
-  const { loading, data, error } = useSelector(
-    (state) => state.comments.comments
-  );
+  const {
+    comments: { loading, data, error },
+    pageInfo: {
+      page: { currentPage },
+    },
+  } = useSelector((state) => state.comments);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getComments());
-  }, [dispatch]);
+  }, [dispatch, currentPage]);
 
   if (loading) return <div>로딩중...</div>;
   if (error) return <div>애러발생... {error}</div>;
   if (!data) return null;
-
-  console.log("data:", data);
 
   return <CommentList comments={data} />;
 }

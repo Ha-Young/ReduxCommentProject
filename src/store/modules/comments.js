@@ -4,7 +4,8 @@ const GET_COMMENTS = "comments/GET_COMMENTS";
 const GET_COMMENTS_SUCCESS = "comments/GET_COMMENTS_SUCCESS";
 const GET_COMMENTS_ERROR = "comments/GET_COMMENTS_ERROR";
 
-const SET_PAGENATION = "page/SET_SET_PAGENATION";
+const SET_PAGENATION = "page/SET_PAGENATION";
+const SET_PAGE = "page/SET_PAGE";
 
 const CREATE_COMMENT = "comment/CREATE_COMMENT";
 const UPDATE_COMMENT = "comment/UPDATE_COMMENT";
@@ -45,6 +46,13 @@ export const setPagenation = () => async (dispatch, getState) => {
   }
 };
 
+export const setPage = (page) => async (dispatch, getState) => {
+  dispatch({
+    type: SET_PAGE,
+    currentPage: page,
+  });
+};
+
 export const getComments = () => async (dispatch, getState) => {
   dispatch({ type: GET_COMMENTS }); // 요청 시작
 
@@ -56,17 +64,6 @@ export const getComments = () => async (dispatch, getState) => {
       limit
     ); // API 호출
     dispatch({ type: GET_COMMENTS_SUCCESS, comments }); // 성공
-
-    // 페이지 개수 구하기
-    const pageCount = Math.floor(
-      (comments.length - 1) / getState().comments.pageInfo.limit + 1
-    );
-    const maximumPage = pageCount;
-
-    dispatch({
-      type: SET_PAGENATION,
-      page: makePage(1, pageCount, 1, maximumPage),
-    });
   } catch (error) {
     dispatch({ type: GET_COMMENTS_ERROR, error }); // 애러
   }
@@ -81,7 +78,7 @@ export const initialState = {
   pageInfo: {
     limit: 4,
     page: {
-      pageCount: 3,
+      pageCount: 1,
       currentPage: 1,
       minimumPage: 1,
       maximumPage: 1,
@@ -124,6 +121,17 @@ export default function comments(state = initialState, action) {
         pageInfo: {
           ...state.pageInfo,
           page: action.page,
+        },
+      };
+    case SET_PAGE:
+      return {
+        ...state,
+        pageInfo: {
+          ...state.pageInfo,
+          page: {
+            ...state.pageInfo.page,
+            currentPage: action.currentPage,
+          },
         },
       };
     default:
