@@ -69,6 +69,22 @@ export const getComments = () => async (dispatch, getState) => {
   }
 };
 
+export const createComment = (comment) => async (dispatch) => {
+  commentsApi.postComment(comment);
+  setPage(1);
+  getComments();
+};
+
+export const updateComment = (updatedComment) => async (dispatch) => {
+  commentsApi.putComment(updatedComment);
+  getComments();
+};
+
+export const deleteComment = (commentId) => async (dispatch) => {
+  commentsApi.deleteComment(commentId);
+  getComments();
+};
+
 export const initialState = {
   comments: {
     loading: false,
