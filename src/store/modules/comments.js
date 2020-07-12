@@ -7,9 +7,9 @@ const GET_COMMENTS_ERROR = "comments/GET_COMMENTS_ERROR";
 const SET_PAGENATION = "page/SET_PAGENATION";
 const SET_PAGE = "page/SET_PAGE";
 
-const CREATE_COMMENT = "comment/CREATE_COMMENT";
-const UPDATE_COMMENT = "comment/UPDATE_COMMENT";
-const DELETE_COMMENT = "comment/DELETE_COMMENT";
+// const CREATE_COMMENT = "comment/CREATE_COMMENT";
+// const UPDATE_COMMENT = "comment/UPDATE_COMMENT";
+// const DELETE_COMMENT = "comment/DELETE_COMMENT";
 
 // page객체를 만드는 함수
 const makePage = (
@@ -71,13 +71,12 @@ export const getComments = () => async (dispatch, getState) => {
 
 export const createComment = (comment) => async (dispatch) => {
   commentsApi.postComment(comment);
-  setPage(1);
-  getComments();
+  dispatch(setPage(1));
 };
 
 export const updateComment = (updatedComment) => async (dispatch) => {
   commentsApi.putComment(updatedComment);
-  getComments();
+  dispatch(getComments());
 };
 
 export const deleteComment = (commentId) => async (dispatch) => {
