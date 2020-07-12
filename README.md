@@ -12,7 +12,7 @@
 - [x] 프론트앤드에서 api 호출을 이해한다 (GET POST PUT DELETE -> 모든 메서드 사용하기)
 - [x] async / awiat 혹은 promise를 활용하여 전달받은 api 응답을 가공
 - [x] redux thunk를 활용해 redux 작성하기
-- [ ] 리펙토링 - 반복되는 구조 개선하기
+- [x] 리펙토링 - 반복되는 구조 개선하기
 - [x] reducer 데이터 깊이에 대한 이해
 - [x] React hookuseSelector, useEffect의 사용
 
