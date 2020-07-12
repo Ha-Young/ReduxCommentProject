@@ -25,7 +25,7 @@
       "id": 4,
       "profile_url": "https://picsum.photos/id/4/50/50",
       "author": "abc_4",
-      "content": "Javascript 기초가 부족한데 좋은 가이드 있나요",
+      "content": "Javascript 기초가 부족한데 좋은 가이드 있나요\n네 제가 가르쳐드릴게요",
       "createdAt": "2020-05-04"
     },
     {
@@ -88,7 +88,7 @@
       "id": 13,
       "profile_url": "https://picsum.photos/id/13/50/50",
       "author": "abc_13",
-      "content": "주변에 React 개발자 있나요",
+      "content": "주변에 React 개발자 있나요\n수정됩니다",
       "createdAt": "2020-05-13"
     },
     {
@@ -104,13 +104,6 @@
       "author": "abc_15",
       "content": "vue vs react 뭐가 좋나요.",
       "createdAt": "2020-05-15"
-    },
-    {
-      "id": 16,
-      "profile_url": "https://picsum.photos/id/16/50/50",
-      "author": "abc_16",
-      "content": "Atomic 디자인은 무엇인가요",
-      "createdAt": "2020-05-16"
     },
     {
       "id": 17,
@@ -153,51 +146,6 @@
       "author": "abc_22",
       "content": "주변에 React 개발자 있나요",
       "createdAt": "2020-05-22"
-    },
-    {
-      "id": 23
-    },
-    {
-      "profile_url": "asdf",
-      "author": "sdf",
-      "content": "sdf",
-      "id": 24
-    },
-    {
-      "profile_url": "we",
-      "author": "wef",
-      "content": "wef",
-      "id": 25
-    },
-    {
-      "profile_url": "sdf",
-      "author": "sdf",
-      "content": "sdaf",
-      "id": 26
-    },
-    {
-      "profile_url": "ㄴㅇㄹ",
-      "author": "ㄴㅇㄹㄴㅇㅁㄹ",
-      "content": "ㄴㅇㄹㄴㅇㄹㅁ",
-      "id": 27
-    },
-    {
-      "profile_url": "ㄴㅇㄹ",
-      "author": "ㄴㅇㄹ",
-      "content": "ㅁㄴㅇㄹ",
-      "id": 28
-    },
-    {
-      "profile_url": "ㄴㅇㄹ",
-      "author": "12",
-      "content": "12",
-      "id": 29
-    },
-    {
-      "profile_url": "ㄴㅇㄹ",
-      "author": "ㅇㄹ",
-      "content": "ㅇㄹㅇㄹ",
-      "id": 30
     }
   ]
 }

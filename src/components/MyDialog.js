@@ -1,7 +1,18 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled, { keyframes } from "styled-components";
+import UpdateType from "./dialogType/UpdateType";
+import ConfirmType from "./dialogType/ConfirmType";
 
-const DarkBackground = styled.div`
+const fadeIn = keyframes`
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+`;
+
+const MyDialogBlock = styled.div`
   position: fixed;
   left: 0;
   top: 0;
@@ -11,64 +22,40 @@ const DarkBackground = styled.div`
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.8);
-`;
-
-const DialogBlock = styled.div`
-  width: 320px;
-  padding: 1.5rem;
-  background: white;
-  border-radius: 2px;
+  padding: 20px;
+  h1 {
+    margin: 0;
+  }
   h3 {
     margin: 0;
-    font-size: 1.5rem;
   }
-  p {
-    font-size: 1.125rem;
-  }
+
+  animation-duration: 0.25s;
+  animation-timing-function: ease-out;
+  animation-name: ${fadeIn};
+  animation-fill-mode: forwards;
 `;
 
-const ButtonGroup = styled.div`
-  margin-top: 3rem;
-  display: flex;
-  justify-content: flex-end;
-`;
-
-const Button = styled.div`
-  background-color: #dee2e6;
-
-  ${(props) =>
-    props.cancle &&
-    css`
-      background-color: #f03e3e;
-      color: white;
-    `}
-
-  ${(props) =>
-    props.cancle &&
-    css`
-      background-color: #495057;
-      color: white;
-    `}
-`;
-
-function MyDialog({ title, children, confirmText, cancelText }) {
+function MyDialog({ type, onConfirm, onCancel, updateObj }) {
   return (
-    <DarkBackground>
-      <DialogBlock>
-        <h3>{title}</h3>
-        <p>{children}</p>
-        <ButtonGroup>
-          <Button cancle>{cancelText}</Button>
-          <Button ok>{confirmText}</Button>
-        </ButtonGroup>
-      </DialogBlock>
-    </DarkBackground>
+    <MyDialogBlock>
+      {type === "update" && (
+        <UpdateType
+          update
+          updateObj={updateObj}
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+        />
+      )}
+      {type === "remove" && (
+        <ConfirmType
+          text="정말 삭제하시겠습니까?"
+          onConfirm={onConfirm}
+          onCancel={onCancel}
+        />
+      )}
+    </MyDialogBlock>
   );
 }
 
-MyDialog.defaultProps = {
-  confirmText: "확인",
-  cancelText: "취소",
-};
-
-export default MyDialog;
+export default React.memo(MyDialog);

@@ -80,8 +80,9 @@ export const updateComment = (updatedComment) => async (dispatch) => {
 };
 
 export const deleteComment = (commentId) => async (dispatch) => {
+  console.log("delete comment id ", commentId);
   commentsApi.deleteComment(commentId);
-  getComments();
+  dispatch(getComments());
 };
 
 export const initialState = {
