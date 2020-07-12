@@ -13,4 +13,4 @@ function FormContainer() {
   return <Form createComment_Submit={createComment_Submit} />;
 }
 
-export default FormContainer;
+export default React.memo(FormContainer);

@@ -74,4 +74,4 @@ function CommentContainer({ comment }) {
   );
 }
 
-export default CommentContainer;
+export default React.memo(CommentContainer);

@@ -19,4 +19,4 @@ function PageListContainer() {
   return <PageList pageInfo_page={pageInfo_page} onClickPage={onClickPage} />;
 }
 
-export default PageListContainer;
+export default React.memo(PageListContainer);

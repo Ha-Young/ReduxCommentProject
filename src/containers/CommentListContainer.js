@@ -24,4 +24,4 @@ function CommentListContainer() {
   return <CommentList comments={data} />;
 }
 
-export default CommentListContainer;
+export default React.memo(CommentListContainer);

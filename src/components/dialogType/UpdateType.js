@@ -83,4 +83,4 @@ function UpdateType({ onConfirm, onCancel, updateObj }) {
   );
 }
 
-export default UpdateType;
+export default React.memo(UpdateType);
