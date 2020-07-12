@@ -1,4 +1,5 @@
 import * as commentsApi from "../../api/comments";
+import { reducerUtils, handleAsyncActions } from "./lib/asyncUtils";
 
 const GET_COMMENTS = "comments/GET_COMMENTS";
 const GET_COMMENTS_SUCCESS = "comments/GET_COMMENTS_SUCCESS";
@@ -63,15 +64,16 @@ export const getComments = () => async (dispatch, getState) => {
       currentPage,
       limit
     ); // API 호출
-    dispatch({ type: GET_COMMENTS_SUCCESS, comments }); // 성공
+    dispatch({ type: GET_COMMENTS_SUCCESS, payload: comments }); // 성공
   } catch (error) {
-    dispatch({ type: GET_COMMENTS_ERROR, error }); // 애러
+    dispatch({ type: GET_COMMENTS_ERROR, payload: error }); // 애러
   }
 };
 
 export const createComment = (comment) => async (dispatch) => {
   commentsApi.postComment(comment);
   dispatch(setPage(1));
+  dispatch(getComments());
 };
 
 export const updateComment = (updatedComment) => async (dispatch) => {
@@ -86,11 +88,7 @@ export const deleteComment = (commentId) => async (dispatch) => {
 };
 
 export const initialState = {
-  comments: {
-    loading: false,
-    data: null,
-    error: null,
-  },
+  comments: reducerUtils.initial(),
   pageInfo: {
     limit: 4,
     page: {
@@ -105,32 +103,9 @@ export const initialState = {
 export default function comments(state = initialState, action) {
   switch (action.type) {
     case GET_COMMENTS:
-      return {
-        ...state,
-        comments: {
-          loading: true,
-          data: null,
-          error: null,
-        },
-      };
     case GET_COMMENTS_SUCCESS:
-      return {
-        ...state,
-        comments: {
-          loading: false,
-          data: action.comments,
-          error: null,
-        },
-      };
     case GET_COMMENTS_ERROR:
-      return {
-        ...state,
-        comments: {
-          loading: false,
-          data: null,
-          error: action.error,
-        },
-      };
+      return handleAsyncActions(GET_COMMENTS, "comments")(state, action);
     case SET_PAGENATION:
       return {
         ...state,

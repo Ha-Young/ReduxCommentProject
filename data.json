@@ -95,7 +95,7 @@
       "id": 14,
       "profile_url": "https://picsum.photos/id/14/50/50",
       "author": "abc_14",
-      "content": "Next.js 가이드 주세요.14",
+      "content": "Next.js 가이드 주세요.ㅎㅎㅎ",
       "createdAt": "2020-05-14"
     },
     {
@@ -111,13 +111,6 @@
       "author": "abc_17",
       "content": "UI 테스트는 어떻게 진행하나요",
       "createdAt": "2020-05-17"
-    },
-    {
-      "id": 18,
-      "profile_url": "https://picsum.photos/id/18/50/50",
-      "author": "abc_18",
-      "content": "local storage는 언제 사용하는게 좋나요.",
-      "createdAt": "2020-05-18"
     },
     {
       "id": 19,
@@ -146,6 +139,12 @@
       "author": "abc_22",
       "content": "주변에 React 개발자 있나요",
       "createdAt": "2020-05-22"
+    },
+    {
+      "profile_url": "https://picsum.photos/id/21/50/50",
+      "author": "하용",
+      "content": "가가 안뇽 \n귀욥!",
+      "id": 23
     }
   ]
 }
