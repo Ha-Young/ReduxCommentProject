@@ -25,7 +25,7 @@
       "id": 4,
       "profile_url": "https://picsum.photos/id/4/50/50",
       "author": "abc_4",
-      "content": "Javascript 기초가 부족한데 좋은 가이드 있나요",
+      "content": "Javascript 기초가 부족한데 좋은 가이드 있나요\n네 제가 가르쳐드릴게요",
       "createdAt": "2020-05-04"
     },
     {
@@ -88,14 +88,14 @@
       "id": 13,
       "profile_url": "https://picsum.photos/id/13/50/50",
       "author": "abc_13",
-      "content": "주변에 React 개발자 있나요",
+      "content": "주변에 React 개발자 있나요\n수정됩니다",
       "createdAt": "2020-05-13"
     },
     {
       "id": 14,
       "profile_url": "https://picsum.photos/id/14/50/50",
       "author": "abc_14",
-      "content": "Next.js 가이드 주세요.14",
+      "content": "Next.js 가이드 주세요.ㅎㅎㅎ",
       "createdAt": "2020-05-14"
     },
     {
@@ -106,25 +106,11 @@
       "createdAt": "2020-05-15"
     },
     {
-      "id": 16,
-      "profile_url": "https://picsum.photos/id/16/50/50",
-      "author": "abc_16",
-      "content": "Atomic 디자인은 무엇인가요",
-      "createdAt": "2020-05-16"
-    },
-    {
       "id": 17,
       "profile_url": "https://picsum.photos/id/18/50/50",
       "author": "abc_17",
       "content": "UI 테스트는 어떻게 진행하나요",
       "createdAt": "2020-05-17"
-    },
-    {
-      "id": 18,
-      "profile_url": "https://picsum.photos/id/18/50/50",
-      "author": "abc_18",
-      "content": "local storage는 언제 사용하는게 좋나요.",
-      "createdAt": "2020-05-18"
     },
     {
       "id": 19,
@@ -153,6 +139,12 @@
       "author": "abc_22",
       "content": "주변에 React 개발자 있나요",
       "createdAt": "2020-05-22"
+    },
+    {
+      "profile_url": "https://picsum.photos/id/21/50/50",
+      "author": "하용",
+      "content": "가가 안뇽 \n귀욥!",
+      "id": 23
     }
   ]
 }
