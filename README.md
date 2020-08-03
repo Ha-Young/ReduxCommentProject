@@ -68,8 +68,6 @@ GET /comments?_page=3&_limit=4&_order=desc&_sort=id
 | PUT | /comments/{commentId} |
 | DELETE | /comments/{commentId} |
 
-## 과제 제출 방식
-[과제 제출 가이드](./submission_guide.md)를 참고해 주세요.
 
 ## 구현시 참고사항
 - 리듀서를 다루기 번거롭게 느껴진다면 immer 패키지를 사용해보세요.
