@@ -2,6 +2,12 @@
 
 - 본 프로젝트는 과제로 만들었습니다.
 
+# How To Use
+1. git clone
+2. npm install
+3. npm run api for json-server
+4. npm start
+
 ---
 
 # ToDo
