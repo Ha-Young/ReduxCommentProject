@@ -1,6 +1,7 @@
 # 댓글 프로젝트 구현하기
 
 - 본 프로젝트는 과제로 만들었습니다.
+- Json-Server를 사용하였습니다. (로컬환경. 세부사항은 아래 How To Use 참조)
 
 # How To Use
 1. git clone
